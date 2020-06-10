@@ -4,6 +4,12 @@ const fs = require('fs')
 const express = require('express');
 const http = require('http');
 const app = express();
+app.get("/", (request, response) => {
+
+
+
+response.sendStatus(200);
+});
 let application = fs.readFileSync('./application.yml', 'utf8')
 
 if (process.env.PORT) {
