@@ -1,7 +1,9 @@
 const axios = require("axios");
 const urls = require("./url.js");
 const fs = require('fs')
-const http = require('http')
+const express = require('express');
+const http = require('http');
+const app = express();
 let application = fs.readFileSync('./application.yml', 'utf8')
 
 if (process.env.PORT) {
@@ -64,3 +66,8 @@ function startLavalink() {
 
 const cdn = 'http://cdn.glitch.com/2cf2d9f7-ec3a-4513-a642-80d41b6148fe%2FLavalink.jar?v=1591244803929'
 download(cdn, './Lavalink.jar', startLavalink)
+
+
+app.get("/", (request, response) => {
+  response.status(200).send("OK");
+});
