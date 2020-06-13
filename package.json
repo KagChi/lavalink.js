@@ -2,14 +2,15 @@
   "name": "heroku-lavalink",
   "version": "1.0.1",
   "description": "",
-  "main": "bootstrap.js",
+  "main": "pm2.js",
   "dependencies": {
     "express": "^4.17.1",
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "pm2": "^2.4.4"
     },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bootstrap.js"
+    "start": "node pm2.js"
   },
   "author": "",
   "license": "MIT"
