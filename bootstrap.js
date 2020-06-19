@@ -70,7 +70,7 @@ function startLavalink() {
     });
 }
 
-const cdn = 'http://cdn.glitch.com/2cf2d9f7-ec3a-4513-a642-80d41b6148fe%2FLavalink.jar?v=1591244803929'
+const cdn = 'https://cdn.glitch.com/2cf2d9f7-ec3a-4513-a642-80d41b6148fe%2FLavalink%20(3).jar?v=1592556250591'
 download(cdn, './Lavalink.jar', startLavalink)
 
 
