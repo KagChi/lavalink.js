@@ -1,5 +1,6 @@
 let application = fs.readFileSync('./application.yml', 'utf8')
 
+const http = require("http")
 if (process.env.PORT) {
     application = application.replace('DYNAMICPORT', process.env.PORT)
 }
@@ -23,16 +24,6 @@ const download = function (url, dest, cb) { //modified code from https://stackov
         console.error(err)
     });
 };
-
-const uptimerobo = async () => {
-    setInterval(() => {
-        urls.forEach(url => {
-            axios.get(url).then(() => console.log("Pong at " + Date.now())).catch(() => {});
-        });
-    }, 60 * 1000);
-};
-
-uptimerobo();
 
 function startLavalink() {
     const spawn = require('child_process').spawn;
