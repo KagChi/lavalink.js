@@ -1,15 +1,3 @@
-const axios = require("axios");
-const urls = require("./url.js");
-const fs = require('fs')
-const express = require('express');
-const http = require('http');
-const app = express();
-app.get("/", (request, response) => {
-
-
-
-response.sendStatus(200);
-});
 let application = fs.readFileSync('./application.yml', 'utf8')
 
 if (process.env.PORT) {
@@ -74,6 +62,3 @@ const cdn = 'http://cdn.glitch.com/2cf2d9f7-ec3a-4513-a642-80d41b6148fe%2FLavali
 download(cdn, './Lavalink.jar', startLavalink)
 
 
-app.get("/", (request, response) => {
-  response.status(200).send("OK");
-});
